@@ -35,7 +35,7 @@ public class PostsController {
         return postsService.getPosts();
     }
 
-    @GetMapping("/api/post/{id}")
+    @GetMapping("/api/posts/{id}")
     public PostsPwDto getPosts(@PathVariable Long id){
         return postsService.getPost(id);
     }

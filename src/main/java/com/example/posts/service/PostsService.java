@@ -42,7 +42,7 @@ public class PostsService {
                 () -> new RuntimeException("작성된 글이 없습니다.")
         );
         PostsPwDto postsPwDto = new PostsPwDto(posts);
-        if (postsPwDto.getPw().equals(posts.getPw())){
+        if (postsRequestDto.getPw().equals(posts.getPw())){
             posts.update(postsRequestDto);
             return postsPwDto;
         } else{
