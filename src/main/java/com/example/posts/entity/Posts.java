@@ -6,8 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Getter
+@NoArgsConstructor
 @Entity
-@NoArgsConstructor   // 찾기
 public class Posts extends Timestamped {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO) // 기본키
@@ -26,7 +26,7 @@ public class Posts extends Timestamped {
     private String pw;
 
 
-    public Posts(PostsRequestDto requestDto) {               // request dto뭐길래
+    public Posts(PostsRequestDto requestDto) {
         this.writer = requestDto.getWriter();
         this.title = requestDto.getTitle();
         this.contents = requestDto.getContents();

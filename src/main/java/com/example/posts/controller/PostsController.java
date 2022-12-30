@@ -20,11 +20,6 @@ public class PostsController {
 
     private final PostsService postsService;
 
-    @GetMapping("/")
-    public ModelAndView home(){
-        return new ModelAndView("index");
-    }
-
     @PostMapping("/api/posts")
     public Posts createPosts(@RequestBody PostsRequestDto requestDto){
         return postsService.createPosts(requestDto);
